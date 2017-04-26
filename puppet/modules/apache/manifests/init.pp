@@ -5,13 +5,6 @@ class apache {
 		allowcdrom => 'true',
 	}
 
-	service {'apache2':
-                ensure => 'running',
-                enable => 'true',
-                require => Package["apache2"],
-        }
-
-	
 	package {'php7.0':
 		ensure => 'installed',
 		allowcdrom => 'true',		
@@ -34,13 +27,7 @@ class apache {
 		content => '<?php print 2+2 ?>',
 	}
 	
-	exec {'a2enmod': 
-		command => '/usr/sbin/a2enmod userdir',
-		notify => Service["apache2"],
-		require => Package["apache2"],
-	}
-
-	file { '/etc/apache2/mods-enabled/userdir.load':
+        file { '/etc/apache2/mods-enabled/userdir.load':
                 ensure => 'link',
                 target => '/etc/apache2/mods-available/userdir.load',
                 notify => Service["apache2"],
@@ -53,7 +40,19 @@ class apache {
                 notify => Service["apache2"],
                 require => Package["apache2"],
         }
+
+	exec {'a2enmod': 
+		command => '/usr/sbin/a2enmod userdir',
+		notify => Service["apache2"],
+		require => Package["apache2"],
+	}
+
 	
+	 service {'apache2':
+                ensure => 'running',
+                enable => 'true',
+                require => Package["apache2"],
+        }
 
 }
 

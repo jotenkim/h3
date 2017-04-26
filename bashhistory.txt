@@ -1,0 +1,274 @@
+    1  setxkbmap fi
+    2  sudo apt-get update
+    3  sudo apt-get upgrade
+    4  setxkbmap fi
+    5  sudo apt-get install git -y
+    6  sudo apt-get install apache2
+    7  apt-cache search apache | grep php
+    8  sudo apt-get install libapache2-mod-php7.0
+    9  sudo apt-get install puppet
+   10  whereis a2enmod
+   11  whereis apache
+   12  cd /etc/apache2/
+   13  ls
+   14  cd mods-
+   15  cd mods-enabled/
+   16  ls
+   17  nano php7.0.
+   18  nano php7.0.conf 
+   19  sudoedit php7.0.conf 
+   20  sudo nano php7.0.conf
+   21  cd ..
+   22  ls
+   23  cd mods-available/
+   24  ls
+   25  sudo edit php7.0.conf 
+   26  sudoedit php7.0.conf 
+   27  sudo cp php7.0.conf /etc/puppet/modules/apache/templates/php7.0.conf.erb
+   28  sudo cp php7.0.conf /etc/puppet/modules/apache/templates php7.0.conf.erb
+   29  sudo cp php7.0.conf php.7.0.conf.erb /etc/puppet/modules/apache/templates
+   30  cd /etc/puppet/
+   31  ls
+   32  cd modules/
+   33  ls
+   34  sudo mkdir apache
+   35  ls
+   36  ls apache/
+   37  ls
+   38  cd apache/
+   39  ls
+   40  sudo mkdir templates manifests
+   41  ls
+   42  sudo cp php7.0.conf php.7.0.conf.erb /etc/puppet/modules/apache/templates
+   43  cd /etc/apache2/mods-available/ 
+   44  sudo cp php7.0.conf php.7.0.conf.erb /etc/puppet/modules/apache/templates
+   45  sudo cp php7.0.conf /etc/puppet/modules/apache/templates/php7.0.conf.erb
+   46  cd /etc/puppet/modules/apache
+   47  ls
+   48  cd templates/
+   49  ls
+   50  rm php7.0.conf
+   51  ls
+   52  rm php7.0.conf
+   53  sudo rm php7.0.conf
+   54  ls
+   55  cat php7.0.conf.erb 
+   56  cd
+   57  cd 
+   58  cd /etc/apache2/
+   59  ls
+   60  cd mods-enabled/
+   61  ls
+   62  cat php7.0.conf 
+   63  cd ..
+   64  ls
+   65  cd sites-available/
+   66  ls
+   67  cat 000-default.conf 
+   68  ls
+   69  cd ..
+   70  ls
+   71  cd conf-enabled/
+   72  ls
+   73  cd ..
+   74  ls
+   75  cd mods-available/
+   76  ls
+   77  nano user.conf
+   78  sudo nano user.conf
+   79  cat userdir.conf
+   80  cat userdir.load 
+   81  /usr/lib/apache2/
+   82  cd /usr/lib/apache2/
+   83  ls
+   84  cd modules/
+   85  ls
+   86  cat mod_userdir.so 
+   87  cd
+   88  sudo a2enmod userdir
+   89  sudo service apache2 restart
+   90  ls
+   91  cd /etc/puppet/
+   92  ls
+   93  cd modules/
+   94  ls
+   95  cd
+   96  mkdir public_html
+   97  ls
+   98  cd public_html/
+   99  ls
+  100  touch index.php "<?php print 2+2 ?>"
+  101  ls
+  102  nano index.php 
+  103  ls
+  104  where is php7.0.conf
+  105  cd
+  106  where is php7.0.conf
+  107  whereis php7.0.conf
+  108  whereis apache
+  109  whereis puppet
+  110  cd /etc/puppet/modules/
+  111  ls
+  112  cd apache/
+  113  ls
+  114  cd manifests/
+  115  ls
+  116  nano init.pp
+  117  sudoedit init.pp
+  118  history
+  119  sudoedit init.pp
+  120  sudo apt-get install php7.0
+  121  sudoedit init.pp
+  122  sudo puppet apply -e 'class {apache:}'
+  123  sudoedit init.pp
+  124  sudo puppet apply -e 'class {apache:}'
+  125  sudoedit init.pp
+  126  sudo puppet apply -e 'class {apache:}'
+  127  sudoedit init.pp
+  128  sudo puppet apply -e 'class {apache:}'
+  129  sudoedit init.pp
+  130  sudo puppet apply -e 'class {apache:}'
+  131  cd
+  132  ls
+  133  public_html/
+  134  ls
+  135  cd public_html/
+  136  ls
+  137  cat index.php 
+  138  nano index.php 
+  139  cd /etc/puppet/modules/apache/manifests
+  140  nano index.php 
+  141  sudoedit init.pp
+  142  cd
+  143  cd public_html/
+  144  ls
+  145  rm index.php 
+  146  ls
+  147  cd /etc/puppet/modules/apache/manifests
+  148  sudo puppet apply -e 'class {apache:}'
+  149  sudoedit init.pp
+  150  sudo puppet apply -e 'class {apache:}'
+  151  sudoedit init.pp
+  152  sudo puppet apply -e 'class {apache:}'
+  153  cd
+  154  ls
+  155  sudo rm -rf public_html/
+  156  ls
+  157  sudo puppet apply -e 'class {apache:}'
+  158  ls
+  159  cd /home/
+  160  ls
+  161  cd
+  162  cd /etc/puppet/modules/
+  163  ls
+  164  cd apache/
+  165  ls
+  166  cd manifests/
+  167  ls
+  168  sudoedit init.pp
+  169  sudo puppet apply -e 'class {apache:}'
+  170  sudoedit init.pp
+  171  sudo puppet apply -e 'class {apache:}'
+  172  sudoedit init.pp
+  173  sudo puppet apply -e 'class {apache:}'
+  174  sudo apt-get install git
+  175  ls
+  176  cd
+  177  ls
+  178  git clone https://github.com/jotenkim/h3.git
+  179  ls
+  180  cd h3/
+  181  ls
+  182  git pull
+  183  git add .
+  184  git status
+  185  cd
+  186  cd /etc/
+  187  ls
+  188  cd
+  189  ls
+  190  cd h3/
+  191  ls
+  192  mkdir puppet
+  193  ls
+  194  cd puppet/
+  195  mkdir modules
+  196  ls
+  197  cd
+  198  cd /etc/puppet/modules/
+  199  ls
+  200  sudo cp -rf apache/ ../h3
+  201  cd
+  202  ls
+  203  cd h3
+  204  ls
+  205  ls puppet/
+  206  ls
+  207  cd puppet/
+  208  ls
+  209  cd modules/
+  210  ls
+  211  cp -rf cd
+  212  cd /etc/puppet/modules
+  213  ls
+  214  sudo cp -rf apache/ /home/xubuntu/h3/puppet/modules/
+  215  cd
+  216  ls
+  217  cd h3/puppet/modules/
+  218  ls
+  219  cd apache
+  220  ls
+  221  cd manifests/
+  222  ls
+  223  cat init.pp 
+  224  cd
+  225  ls
+  226  cd /h3/puppet/modules/apache/manifests
+  227  cd /h3/puppet/modules/apache/
+  228  ls
+  229  cd h3/
+  230  ls
+  231  sudo apt-get install tree -y
+  232  tree
+  233  cd puppet/modules/apache/templates/
+  234  ls
+  235  cat php7.0.conf.erb 
+  236  history
+  237  cd
+  238  ls
+  239  ./ABC.sh&>output.txt
+  240  ls
+  241  cat output.txt 
+  242  ls
+  243  cat output.txt 
+  244  rm output.txt 
+  245  ls
+  246  cd h3
+  247  git status
+  248  git pull
+  249  git add .
+  250  git commit
+  251  git config --global user.email wertyy@gmail.com
+  252  git config --global user.name Kim Freeman
+  253  git commit
+  254  git status
+  255  git push
+  256  ls
+  257  nano apply.sh
+  258  ls
+  259  git status
+  260  git pull
+  261  git add .
+  262  git commit
+  263  ls
+  264  git push
+  265  git status
+  266  history
+  267  cd
+  268  ls
+  269  tree
+  270  sudo apt-get install shutter
+  271  ls
+  272  cd h3
+  273  ls
+  274  history > bashhistory.txt

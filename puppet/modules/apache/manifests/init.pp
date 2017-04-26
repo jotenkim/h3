@@ -2,14 +2,17 @@ class apache {
 
 	package {'apache2':
 		ensure => 'installed',
+		allowcdrom => 'true',
 	}
 	
 	package {'php7.0':
 		ensure => 'installed',
+		 allowcdrom => 'true',		
 	}
 	
 	package {'libapache2-mod-php7.0':
 		ensure => 'installed',
+		 allowcdrom => 'true',
 	}
 
 	file {'/etc/apache2/mods-available/php7.0.conf':
